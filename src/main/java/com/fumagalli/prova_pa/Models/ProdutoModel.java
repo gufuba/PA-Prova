@@ -1,5 +1,6 @@
 package com.fumagalli.prova_pa.Models;
 
+import com.fumagalli.prova_pa.Enums.StatusProduto;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,6 +12,7 @@ public class ProdutoModel {
     private String nome;
     private String descricao;
     private double preco;
+    private StatusProduto status;
 
     public ProdutoModel() {
     }
@@ -45,5 +47,12 @@ public class ProdutoModel {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public StatusProduto getStatus() {
+        return status;
+    }
+    public void setStatus(StatusProduto status) {
+        this.status = status;
     }
 }

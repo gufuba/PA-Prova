@@ -1,7 +1,6 @@
 package com.fumagalli.prova_pa.Controllers;
 
 import com.fumagalli.prova_pa.Models.ProdutoModel;
-import com.fumagalli.prova_pa.Repositories.ProdutoRepository;
 import com.fumagalli.prova_pa.Services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

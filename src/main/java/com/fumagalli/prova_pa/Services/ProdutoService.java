@@ -30,6 +30,7 @@ public class ProdutoService {
         model.setNome(produto.getNome());
         model.setDescricao(produto.getDescricao());
         model.setPreco(produto.getPreco());
+        model.setStatus(produto.getStatus());
 
         return produtoRepository.save(model);
     }
