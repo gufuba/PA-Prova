@@ -28,7 +28,7 @@ public class ProdutoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProdutoModel> buscarProdutoPorId(Long id){
+    public ResponseEntity<ProdutoModel> buscarProdutoPorId(@PathVariable Long id){
         Optional<ProdutoModel> produto = produtoService.buscarProdutoPorId(id);
         if(produto.isPresent()){
             return ResponseEntity.status(200).body(produto.get());
@@ -47,9 +47,9 @@ public class ProdutoController {
     public ResponseEntity<?> deletarProduto(@PathVariable Long id){
         produtoService.deletarProduto(id);
         if(produtoService.buscarProdutoPorId(id).isPresent()){
-            return ResponseEntity.status(204).build();
-        } else {
             return ResponseEntity.status(404).build();
+        } else {
+            return ResponseEntity.status(204).build();
         }
     }
 }
